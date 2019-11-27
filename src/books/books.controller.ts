@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
-import { Book } from './interfaces/book.dto';
+import { BookDto } from './interfaces/book.dto';
 
 @Controller('books')
 export class BooksController {
@@ -9,7 +9,7 @@ export class BooksController {
   }
 
   @Post()
-  create(@Body() book: Book) {
+  create(@Body() book: BookDto) {
     return book;
   }
 
